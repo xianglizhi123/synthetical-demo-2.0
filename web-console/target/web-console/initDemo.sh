@@ -12,4 +12,5 @@ sed -i 's/\(consoleBackstageHost=\).*/\1'$consoleBackstageHost'/' $consoleBackst
 
 # Picture path config
 goodsPictureConfigPath=/usr/local/tomcat/webapps/ROOT/WEB-INF/classes/config/application.properties
+picturePath=${picturePath//\//\\\/}
 sed -i 's/\(goodsPictureCommonPath=\).*/\1'$picturePath'/' $goodsPictureConfigPath
